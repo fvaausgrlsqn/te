@@ -64,6 +64,42 @@ docker build -f Dockerfile -t webchainminer .
 docker run webchainminer
 ```
 
+## Running the miner container in the background:
+
+1. Build the docker image for the miner using one of the methods described above.
+
+2. Create a new container using the newly built docker image:
+
+```
+docker container create webchainminer
+```
+
+This command will output a long hash.
+
+3. Start the new container referenced by the long hash from the previous step:
+
+```
+docker container start {that long hash}
+```
+
+You can combine steps 2 & 3 into a single command:
+
+```
+docker container start `docker container create webchainminer`
+```
+
+4. You can view the running container and see the newly assigned name with the command:
+
+```
+docker container ls
+```
+
+5. View container logs using that newly assigned name:
+
+```
+docker container logs -f that-container-name
+```
+
 ---
 
 #### Donations accepted:
