@@ -17,7 +17,7 @@
     "watch": false,
     "pools": [
         {
-            "url": "webchain.wattpool.net:3333",                  // URL of mining server
+            "url": "webchain.wattpool.net:1111",                  // URL of mining server
             "user": "0x035ba77B912EA3eA5a05c07601242fDB28229d81", // username for mining server
             "pass": "x",                                          // password for mining server
             "keepalive": false,                                   // send keepalived for prevent timeout (need pool support)
