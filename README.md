@@ -82,10 +82,16 @@ This command will output a long hash.
 docker container start {that long hash}
 ```
 
-You can combine steps 2 & 3 into a single command:
+* You can combine steps 2 & 3 into a single command:
 
 ```
 docker container start `docker container create webchainminer`
+```
+
+* You can limit CPU usage by passing arguments to the `docker container create` command:
+
+```
+docker container start `docker container create --cpus=".7" webchainminer`
 ```
 
 4. You can view the running container and see the newly assigned name with the command:
