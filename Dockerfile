@@ -12,6 +12,6 @@ FROM alpine:latest
 
 RUN apk add --no-cache ca-certificates libuv
 COPY --from=builder /usr/local/bin/webchain-miner /usr/bin/
-COPY config.json /usr/sbin/
+COPY config.json /usr/bin/
 
 ENTRYPOINT ["webchain-miner"]
