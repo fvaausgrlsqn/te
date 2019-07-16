@@ -106,6 +106,32 @@ docker container ls
 docker container logs -f that-container-name
 ```
 
+## Running the miner container as a systemd service using the Makefile:
+
+Assuming you have created a user `webchainminer` in group `webchainminer` and have cloned this repository in the `webchainminer` home user directory, the following service file will start the daemon automatically at system startup.
+
+Adjust the percentage of CPU being allocated to the process by editing the file `cpus.txt`.  By default, this is set to 35% - feel free to change this value.
+
+Enter the following into `/etc/systemd/system/webchainminer.service`:
+
+```
+[Unit]
+Description=Webchain miner daemon service
+After=network.target
+
+[Service]
+User=webchainminer
+Group=webchainminer
+Type=simple
+Restart=always
+RestartSec=90s
+WorkingDirectory=/home/webchainminer/webchain-miner-dockerized
+ExecStart=/usr/bin/make miner
+
+[Install]
+WantedBy=default.target
+```
+
 ---
 
 #### Donations accepted:
