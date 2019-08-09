@@ -5,15 +5,31 @@ webchain-miner container for WebChain Network
 
 ### Option 1 (default mining fee of 5% - no need to edit `config.json`):
 
-**Run these commands:**
+Webchainminer is now hosted on docker hub. You can get it there, or built it yourself.
 
+#### Pull the image from docker hub
+
+**Run this command:**
+```shell
+docker pull wattpool/webchainminer
 ```
+
+-or-
+
+#### Build the image locally:
+
+**Run these commands:**
+```shell
 git clone https://github.com/wattpool/webchain-miner-dockerized
 
 cd webchain-miner-dockerized
 
 docker build -f Dockerfile -t webchainminer .
+```
 
+After you pull or build the image, run it with the following command:
+
+```shell
 docker run webchainminer -o webchain.wattpool.net:3333 -u WALLET -p x
 ```
 
@@ -22,7 +38,7 @@ docker run webchainminer -o webchain.wattpool.net:3333 -u WALLET -p x
 ### Option 2 (custom fee and worker details): 
 
 **Run these commands:**
-```
+```shell
 git clone https://github.com/wattpool/webchain-miner-dockerized
 
 cd webchain-miner-dockerized
