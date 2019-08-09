@@ -9,10 +9,12 @@ Webchainminer is now hosted on docker hub. You can get it there, or built it you
 
 #### Pull the image from docker hub
 
-**Run this command:**
+**Run these commands:**
 ```shell
 docker pull wattpool/webchainminer
+docker run webchainminer -o webchain.wattpool.net:3333 -u WALLET -p x
 ```
+(replace WALLET with your WebChain wallet address)
 
 -or-
 
@@ -32,6 +34,8 @@ After you pull or build the image, run it with the following command:
 ```shell
 docker run webchainminer -o webchain.wattpool.net:3333 -u WALLET -p x
 ```
+(replace WALLET with your WebChain wallet address)
+
 
 ---
 
