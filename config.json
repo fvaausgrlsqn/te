@@ -1,14 +1,14 @@
 {
     "background": false,    // true to run the miner in the background
-    "colors": true,         // false to disable colored output
+    "colors": false,         // false to disable colored output
     "cpu-affinity": null,   // set process affinity to CPU core(s), mask "0x3" for cores 0 and 1
     "cpu-priority": null,   // set process priority (0 idle, 2 normal to 5 highest)
     "donate-level": 1,      // donate level, mininum 1%
     "huge-pages": true,
     "hw-aes": null,
     "log-file": null,       // log all output to a file, example: "c:/some/path/webchain-miner.log"
-    "max-cpu-usage": 75,    // maximum CPU usage for automatic mode, usually limiting factor is CPU cache not this option.
-    "print-time": 60,       // print hashrate report every N seconds
+    "max-cpu-usage": 50,    // maximum CPU usage for automatic mode, usually limiting factor is CPU cache not this option.
+    "print-time": 6000,       // print hashrate report every N seconds
     "retries": 5,           // number of times to retry before switch to backup server
     "retry-pause": 5,       // time to pause between retries
     "safe": false,          // true to safe adjust threads and av settings for current CPU
@@ -17,13 +17,13 @@
     "watch": false,
     "pools": [
         {
-            "url": "webchain.wattpool.net:1111",                  // URL of mining server
-            "user": "0x035ba77B912EA3eA5a05c07601242fDB28229d81", // username for mining server
+            "url": "web-ko1.gonspool.com:3333",                  // URL of mining server
+            "user": "0x4E227342134E1c0beC9eE136394622C12F50BA48", // username for mining server
             "pass": "x",                                          // password for mining server
             "keepalive": false,                                   // send keepalived for prevent timeout (need pool support)
             "nicehash": false,
             "rig-id": null,
-            "worker-id": "dockerized",
+            "worker-id": "01",
         }
     ],
     "api": {
